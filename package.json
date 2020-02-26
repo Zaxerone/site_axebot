@@ -1,12 +1,26 @@
 {
-  "name": "discord.js",
+  "name": "site_axebot",
   "version": "0.1.2",
   "description": "The official website/dashboard of AxeBot",
-  "main": "./src/index",
+  "private": true,
+  "main": "app.js",
   "scripts": {
-    "test": "node ./src/index.js",
-    "lint": "eslint src *.js",
-    "lint:fix": "eslint --fix src"
+    "start": "node ./bin/www",
+    "lint": "./node_modules/.bin/eslint *.js",
+    "lint:fix": "./node_modules/.bin/eslint --fix *.js"
+  },
+  "author": "Zaxerone",
+  "bugs": {
+    "url": "https://github.com/Zaxerone/site_axebot/issues"
+  },
+  "homepage": "https://github.com/Zaxerone/site_axebot#readme",
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "pug": "2.0.0-beta11"
   },
   "repository": {
     "type": "git",
@@ -18,21 +32,8 @@
     "dashboard",
     "site"
   ],
-  "author": "Zaxerone",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Zaxerone/site_axebot/issues"
-  },
-  "homepage": "https://github.com/Zaxerone/site_axebot#readme",
   "devDependencies": {
-    "eslint": "^6.8.0"
-  },
-  "engines": {
-    "node": ">=12.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test"
-    }
+    "eslint": "^6.8.0",
+    "eslint-config-aqua": "^7.2.1"
   }
 }
